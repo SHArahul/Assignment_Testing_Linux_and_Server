@@ -27,7 +27,7 @@ Set up a secure, monitored, and automated development environment for two new de
 - `ps aux` – Identify resource-intensive processes
 
 **Implementation Steps:**
-```bash
+bash
 # Install monitoring tools
 sudo apt install htop -y
 
@@ -81,10 +81,7 @@ Minimum 10 characters
 
 At least 1 uppercase, 1 lowercase, 1 digit, 1 special character
 
-bash
-Copy
-Edit
-# Edit /etc/login.defs
+Edit /etc/login.defs
 PASS_MAX_DAYS 30
 PASS_MIN_DAYS 1
 PASS_WARN_AGE 7
@@ -124,7 +121,7 @@ tar -czf /backups/apache_backup_$DATE.tar.gz /etc/httpd/ /var/www/html/
 tar -tzf /backups/apache_backup_$DATE.tar.gz > /backups/apache_backup_verify_$DATE.log
 Cron Schedule (Every Tuesday @ 12:00 AM):
 
-bash
+
 Copy
 Edit
 # Edit crontab
@@ -135,7 +132,7 @@ Edit
 ---
 ---
 
-##Screenshot for each task perform:
+##Screenshot for each task perform:**
 installing htop
 ![installing and updating htop and its updates](https://github.com/user-attachments/assets/c54e330f-da17-482c-bafd-f7c0a3496829)
 ---
@@ -174,4 +171,8 @@ Crontab edit
 Backup scripts
 ![backup apache and nginx files](https://github.com/user-attachments/assets/2f50c2f9-1e42-411a-9c78-c5ff9b22a7aa)
 ![sarah_backup_script bash](https://github.com/user-attachments/assets/6698fbc8-72ce-472a-a076-2352eb73d0b0)
+
+
+
+
 
