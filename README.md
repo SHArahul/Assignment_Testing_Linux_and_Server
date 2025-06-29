@@ -82,7 +82,7 @@ PASS_WARN_AGE 7
 password requisite pam_pwquality.so retry=3 minlen=10 ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1
 
 
-##Task 3: Automated Backup for Web Servers (20 Marks)
+# Task 3: Automated Backup for Web Servers (20 Marks)
 Objective: Schedule weekly backups of web server configurations and document roots.
 
 Sarah (Apache)
@@ -104,9 +104,7 @@ Located in scripts/apache_backup.sh and scripts/nginx_backup.sh
 
 Example:
 
-bash
-Copy
-Edit
+
 #!/bin/bash
 DATE=$(date +%F)
 tar -czf /backups/apache_backup_$DATE.tar.gz /etc/httpd/ /var/www/html/
