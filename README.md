@@ -28,23 +28,18 @@ Set up a secure, monitored, and automated development environment for two new de
 
 **Implementation Steps:**
 bash
-# Install monitoring tools
+Install monitoring tools
 sudo apt install htop -y
 
 # Monitor disk usage
 df -h > /var/log/disk_usage.log
 du -sh /home/* >> /var/log/disk_usage.log
 
-# Log top 10 CPU and memory processes
-ps aux --sort=-%cpu | head -n 10 > /var/log/high_cpu.log
-ps aux --sort=-%mem | head -n 10 > /var/log/high_mem.log
+Log top 10 CPU and memory processes
+ps aux --sort=-%cpu | head -n 10 > /var/log/memory_intensive_process.log
+ps aux --sort=-%mem | head -n 10 > /var/log/cpu_intensive_process.log
 Optional Automation (via cron):
 
-bash
-Copy
-Edit
-# Capture htop snapshot every 12 hours
-0 */12 * * * /usr/bin/htop -b -n 1 > /var/log/htop_snapshot.log
 
 Task 2: User Management & Access Control (10 Marks)
 Objective: Create isolated user accounts with secure credentials and policies.
@@ -57,9 +52,6 @@ Mike (/home/Mike/workspace)
 
 Steps:
 
-bash
-Copy
-Edit
 # Create users and set secure passwords
 sudo useradd -m Sarah
 sudo useradd -m Mike
@@ -165,6 +157,7 @@ pass security and expiration
 
 ---
 Crontab edit
+
 ![crontab screenshot](https://github.com/user-attachments/assets/7e6de026-2f4c-4dca-b32a-d59e7760098b)
 ---
 
